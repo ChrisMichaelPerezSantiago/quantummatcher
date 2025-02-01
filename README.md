@@ -45,7 +45,7 @@ The `QuantumMatcher` class uses a bitwise algorithm to perform fuzzy matching. H
    - Results with a significant score (average score > 0.5 per query part) are included.
    - Results are sorted by score in descending order and filtered to include only perfect matches (score of 1).
 
-## Installation (NOTE: Not yet available)
+## Installation
 
 Ensure TypeScript is installed in your project. You can install it using npm:
 
