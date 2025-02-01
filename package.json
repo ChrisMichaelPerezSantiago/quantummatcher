@@ -53,6 +53,9 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "dependencies": {
+    "effect": "^3.12.7"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^3.14.0",
     "@antfu/ni": "^23.2.0",
