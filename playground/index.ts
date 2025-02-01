@@ -1,6 +1,6 @@
 /* eslint-disable antfu/no-import-dist */
 /* eslint-disable no-console */
-import { QuantumMatcher } from '../dist/index.mjs'
+import { QuantumMatcher } from '../dist'
 import { options } from '../src/const'
 
 // Add timing measurement
