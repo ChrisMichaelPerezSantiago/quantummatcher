@@ -11,7 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/ChrisMichaelPerezSantiago/quantummatcher.git"
   },
-  "keywords": [],
+  "keywords": [
+    "quantum",
+    "matcher",
+    "fuzzy",
+    "matching",
+    "algorithm",
+    "bitwise",
+    "search",
+    "approximate",
+    "text",
+    "typescript"
+  ],
   "sideEffects": false,
   "exports": {
     ".": "./dist/index.mjs"
