@@ -1,7 +1,7 @@
 {
   "name": "quantummatcher",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.15.4",
   "description": "QuantumMatcher library is a fuzzy matching algorithm that leverages bitwise operations to efficiently find approximate matches within a collection of items.",
   "author": "Chris M <chrisperezsantiago1@gmail.com>",
