@@ -1,10 +1,18 @@
+import type { NestedKeyOf } from './types'
 import { Effect } from 'effect'
 import { normalizeText } from './utils'
 
 export class QuantumMatcher<T> {
   private collection: T[]
 
-  constructor(collection: T[], private options: { keys?: (keyof T)[] }) {
+  private pathCache = new Map<string, string[]>()
+
+  constructor(
+    collection: T[],
+    private options: {
+      keys?: Array<NestedKeyOf<T>> | Array<keyof T>
+    },
+  ) {
     this.collection = collection
   }
 
@@ -23,7 +31,7 @@ export class QuantumMatcher<T> {
             let bestMatchesForPart: [number, number][] = []
 
             for (const key of this.options.keys || []) {
-              const text = String(item[key])
+              const text = String(this.getNestedValue(item, key as any))
               const normalizedText = normalizeText(text)
               const queryMask = this.createCharMask(queryPart)
               const m = queryPart.length
@@ -77,6 +85,29 @@ export class QuantumMatcher<T> {
       },
       catch: error => new Error(`[findMatches]: Failed to find matches: ${error}`),
     }).pipe(Effect.runSync)
+  }
+
+  private getNestedValue(obj: any, path: string): any {
+    if (path === '')
+      return obj
+    if (obj == null)
+      return undefined
+
+    // Cache path arrays
+    let pathArray = this.pathCache.get(path)
+    if (!pathArray) {
+      pathArray = path.split('.')
+      this.pathCache.set(path, pathArray)
+    }
+
+    const length = pathArray.length
+    let current = obj
+    for (let i = 0; i < length; i++) {
+      if (current == null)
+        return undefined
+      current = current[pathArray[i]]
+    }
+    return current
   }
 
   private createCharMask(text: string): Map<string, bigint> {
