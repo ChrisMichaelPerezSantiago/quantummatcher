@@ -59,4 +59,142 @@ export const options = [
     description: 'The theory of relativity, developed by Albert Einstein, consists of special relativity and general relativity, which revolutionized our understanding of space, time, and gravity.',
     tags: ['science', 'physics', 'relativity'],
   },
-] as const
+]
+
+export const scientificData = [
+  {
+    id: 'math-001',
+    title: 'Linear Equations',
+    content: {
+      basics: {
+        description: 'Equations where variables are raised to the first power',
+        examples: ['y = mx + b', 'ax + by = c'],
+      },
+      advanced: {
+        applications: {
+          realWorld: 'Used in calculating slopes and linear relationships',
+          economics: 'Supply and demand curves',
+        },
+      },
+      metadata: {
+        category: {
+          main: 'mathematics',
+          sub: 'algebra',
+        },
+        tags: ['algebra', 'equations', 'mathematics'],
+      },
+    },
+  },
+  {
+    id: 'math-002',
+    title: 'Quadratic Equations',
+    content: {
+      basics: {
+        description: 'Equations involving variables raised to the second power',
+        formula: {
+          standard: 'ax² + bx + c = 0',
+          vertex: 'y = a(x - h)² + k',
+        },
+      },
+      solutions: {
+        methods: {
+          factoring: {
+            steps: ['Find factors', 'Set to zero'],
+            example: 'x² + 5x + 6 = (x + 2)(x + 3)',
+          },
+          quadraticFormula: {
+            expression: 'x = (-b ± √(b² - 4ac)) / 2a',
+            usage: 'When factoring is not possible',
+          },
+        },
+      },
+      metadata: {
+        category: {
+          main: 'mathematics',
+          sub: 'algebra',
+          level: 'intermediate',
+        },
+        tags: ['algebra', 'quadratic', 'polynomial'],
+      },
+    },
+  },
+  {
+    id: 'phys-001',
+    title: 'Newton\'s Laws',
+    content: {
+      fundamentals: {
+        laws: {
+          first: {
+            statement: 'An object remains at rest or in motion unless acted upon by a force',
+            applications: {
+              space: 'Objects in space continue moving without propulsion',
+              earth: 'Friction affects motion on Earth',
+            },
+          },
+          second: {
+            statement: 'F = ma',
+            components: {
+              force: 'Measured in Newtons',
+              mass: 'Measured in kilograms',
+              acceleration: 'Measured in meters per second squared',
+            },
+          },
+          third: {
+            statement: 'For every action, there is an equal and opposite reaction',
+            examples: {
+              rocket: 'Propulsion in space',
+              walking: 'Push against ground',
+            },
+          },
+        },
+      },
+      metadata: {
+        category: {
+          main: 'physics',
+          sub: 'mechanics',
+          level: 'fundamental',
+        },
+        tags: ['physics', 'mechanics', 'forces'],
+      },
+    },
+  },
+  {
+    id: 'phys-002',
+    title: 'Quantum Mechanics',
+    content: {
+      principles: {
+        uncertainty: {
+          definition: {
+            basic: 'Cannot simultaneously know position and momentum precisely',
+            mathematical: 'ΔxΔp ≥ ħ/2',
+          },
+          implications: {
+            measurement: {
+              effects: 'Act of measurement affects the system',
+              limitations: 'Fundamental limits to precision',
+            },
+          },
+        },
+        waveFunctions: {
+          properties: {
+            superposition: {
+              description: 'System can exist in multiple states simultaneously',
+              examples: {
+                cat: 'Schrödinger\'s cat thought experiment',
+                electron: 'Electron passing through double slit',
+              },
+            },
+          },
+        },
+      },
+      metadata: {
+        category: {
+          main: 'physics',
+          sub: 'quantum',
+          level: 'advanced',
+        },
+        tags: ['quantum mechanics', 'physics', 'uncertainty'],
+      },
+    },
+  },
+]
