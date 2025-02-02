@@ -163,6 +163,8 @@ not be a good fit for your project(s).
 Please :star: this repository if you like it or this project helped you!\
 Feel free to open issues or submit pull-requests to help me improving my work.
 
+<a href="https://www.buymeacoffee.com/chrismichael" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ---
 
 ### **:robot: Author**
