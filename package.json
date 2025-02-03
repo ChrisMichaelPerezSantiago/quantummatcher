@@ -6,10 +6,10 @@
   "description": "QuantumMatcher library is a fuzzy matching algorithm that leverages bitwise operations to efficiently find approximate matches within a collection of items.",
   "author": "Chris M <chrisperezsantiago1@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/ChrisMichaelPerezSantiago/quantummatcher#readme",
+  "homepage": "https://github.com/chrismichaelps/quantummatcher#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisMichaelPerezSantiago/quantummatcher.git"
+    "url": "git+https://github.com/chrismichaelps/quantummatcher.git"
   },
   "keywords": [
     "quantum",
